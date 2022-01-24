@@ -1,0 +1,488 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    list-style-type: none;
+}
+
+body{
+    background-color: #0D1117;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+input {
+    padding: 0px 12px;
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+
+a {
+    color: #F0F6FC;
+}
+
+
+/*  ==================================  */
+/*              LAYOUT                  */
+/*  ==================================  */
+
+#main {
+    color: #8B949E;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+header {
+    height: 62px;
+    width: 100%;
+    background-color: #161B22;
+}
+
+#sidebar{
+    background-color: #0D1117;
+    width: 25vw;
+    max-width: 350px;
+    height: 100%;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-color: #303030;
+    overflow-y: hidden;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+#content_space{
+    flex: 1;
+    padding: 32px;
+    height: 100%;
+    background-color: #010409;
+}
+
+#content {
+    width: 66%;
+    border-color: #303030;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+
+/*  ==================================  */
+/*              TOP BAR                 */
+/*  ==================================  */
+
+/* Used for mobile screen */
+#navbar_small {
+    display: none;
+}
+
+#navbar {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    padding: 16px 32px;
+}
+
+#logo {
+    margin-right: 16px;
+    height: 30px;
+}
+
+.searchbar {
+    background-color:#0D1117;
+    height: 100%;
+    border: 1px solid #505050;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+#navbar .searchbar {
+    width: 272px;
+    margin-right: 16px;
+}
+
+#navbar .searchbar div{
+    border: 1px solid #505050;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+    margin-right: 4px;
+    text-align: center;
+}
+
+#navbar .searchbar div p{
+    margin: auto;
+    padding: 0px;
+    font-size: 12px;
+}
+
+.searchbar input{
+    margin: 0;
+    margin-left: 12px;
+    padding:0px;
+    width:100%;
+}
+
+#searchbar input:focus{
+    outline: none;
+}
+
+#links {
+    font-size: 14px;
+    font-weight: 600;
+    color: #F0F6FC;
+    display: flex;
+}
+
+#links p{
+    margin-right: 16px;
+    padding: 5px;
+}
+
+.icon {
+    margin: auto;
+    height: 21px;
+}
+
+#icons {
+    width: 100px;
+    margin-left: auto;
+    display: flex;
+    align-items: stretch;
+}
+
+#notifications{
+    width: 16px;
+    margin-right: 16px;
+}
+
+#new {
+    width: 28px;
+    margin-right: 16px;
+    top: 5px;
+}
+
+#self {
+    width: 32px;
+}
+
+
+/*  ==================================  */
+/*              SIDEBAR                 */
+/*  ==================================  */
+
+#repositories {
+    min-height: 105px;
+    margin-bottom: 16px;
+}
+
+#repositories .title{
+    height: 28px;
+    display: flex;
+}
+
+#repositories .title button{
+    width: 69px;
+    height: 28px;
+    margin-left: auto;
+    background-color: #238636;
+    border: 0px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+#repositories .title button img{
+    height: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#repositories .title button p{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 4px;
+    line-height: 100%;
+    color: white;
+}
+
+#repositories_list .searchbar {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    height: 32px;
+}
+
+#repositories_list ul {
+    padding-left: 0px;
+}
+
+#repositories_list ul li{
+    display: flex;
+    font-size: 14px;
+    height: 18px;
+}
+
+#repositories_list ul li{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+#repositories_list ul li a {
+    display: flex;
+}
+
+.listlink img{
+    margin-right: 8px;
+}
+
+.listlink p {
+    word-wrap: break-word;
+}
+
+#recent_activity {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-color: #303030;
+    height: 25%;
+    padding-top: 16px;
+}
+
+#recent_activity div p {
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+/*  ==================================  */
+/*          MAIN PAGE CONTENT           */
+/*  ==================================  */
+
+#content_box{
+    margin-top: 16px;
+    padding: 32px;
+    background-color: #0D1117;
+    border-radius: 5px;
+    border: 1px #303030 solid;
+}
+
+#explore {
+    margin-top: 18px;
+    color: #58A6FF;
+    background-color: #21262D;
+    border: 1px #303030 solid;
+    border-radius: 5px;
+    padding: 5px 16px;
+    width: 124px;
+    height: 30px;
+}
+
+#tips {
+    margin-top: 24px;
+    font-size: 12px;
+    display: flex;
+    flex-flow: column;
+}
+
+#tips div{
+    display: flex;
+    margin-bottom: 8px;
+}
+
+#tips div img {
+    margin-right: 8px;
+    max-width: 16px;
+    max-height: 16px;
+}
+
+#tips div p a {
+    color: #8B949E;
+}
+
+/*  ==================================  */
+/*                 FOOTER               */
+/*  ==================================  */
+
+footer {
+    font-size: 12px;
+    margin: 32px auto;
+    height: 110px;
+    display: flex;
+}
+
+#copyright{
+    height: 100%;
+    margin-right: 32px;
+}
+
+#copyright a {
+    display: flex;
+    text-align: center;
+}
+
+#copyright a p{
+    text-align: center;
+}
+
+#copyright a img{
+    margin-right: 8px;
+}
+
+#copyright a {
+    color: #8B949E;
+}
+
+#copyright a div{
+    height: 24px;
+}
+
+#copyright a div p{
+    height: 100%;
+    line-height: 24px;
+}
+
+#footer_links{
+    display:flex;
+}
+
+#footer_links ul{
+    margin-left: 24px;
+}
+
+#footer_links ul li{
+    margin-bottom: 4px;
+}
+
+#footer_links ul li a{
+    color: #8B949E;
+}
+
+/*  ==================================  */
+/*             SCREEN SIZES             */
+/*  ==================================  */
+
+@media all and (max-width: 995px) {
+    
+    #sidebar {
+        width: 33vw;
+    }
+
+}
+
+@media all and (max-width: 750px) {
+    
+
+    #navbar{
+        display: none;
+    }
+
+    #navbar_small {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 16px;
+    }
+
+    #smallscreen_hamburger {
+        margin-right: auto; 
+        width: 22px; 
+        height: 18px;
+        align-self: center;
+    }
+
+    #smallscreen_notifications {
+        margin-left: auto; 
+        width: 14px; 
+        height: 16px;
+        align-self: center;
+    }
+
+
+    #sidebar {
+        margin-top: 16px;
+        max-width: 100%;
+        width: 100vw;
+        background-color: #010409;
+        padding: 16px;
+        height: auto;
+        border: 0px;
+    }
+
+    #title{
+        margin-bottom: 4px;
+    }
+
+    #new_repository {
+        display: none;
+    }
+
+    #repositories_list{
+        background-color: #0D1117;
+        border: 1px #303030 solid;
+        border-radius: 5px;
+        padding: 32px 4px 16px 4px;
+    }
+
+    #recent_activity {
+        border: 0px;
+    }
+
+    #recent_activity div{
+        background-color: #0D1117;
+        border: 1px #303030 solid;
+        border-radius: 5px;
+        margin-top: 4px;
+        padding: 8px;
+    }
+
+    #recent_activity div p{
+        margin-top: 0px;
+    }
+
+    #content_space{
+        width: 100%;
+        padding: 16px;
+        height: auto;
+    }
+
+    #content {
+        width: 100%;
+        border: 0px;
+    }
+
+    #copyright {
+        width: 0px;
+        display: none;
+    }
+
+    #footer_links{
+        width: 100%;
+    }
+
+    #footer_links ul{
+        margin: 0;
+        padding: 0;
+        width: 33%;
+    }
+
+
+}
