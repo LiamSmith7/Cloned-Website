@@ -36,6 +36,13 @@ a {
     color: #F0F6FC;
 }
 
+.blue {
+    color: #58A6FF;
+}
+
+#tips .blue {
+    color: #58A6FF;
+}
 
 /*  ==================================  */
 /*              LAYOUT                  */
